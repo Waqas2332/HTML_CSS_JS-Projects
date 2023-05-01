@@ -39,22 +39,20 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 60px; }
-
-.heading-primary-main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation-name: moveLeft;
-  animation-duration: 1s; }
-
-.heading-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  animation-name: moveRight;
-  animation-duration: 1s; }
+  .heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveLeft;
+    animation-duration: 1s; }
+  .heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation-name: moveRight;
+    animation-duration: 1s; }
 
 @keyframes moveLeft {
   0% {
@@ -84,8 +82,7 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -97,10 +94,15 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777; }
+  .btn-white::after {
+    background-color: #fff; }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateX(-1px);
@@ -117,13 +119,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn-white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn-animated {
   animation-name: moveBottom;
